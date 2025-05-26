@@ -1,0 +1,17 @@
+# todo-app/docker-compose.dev.yml
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - todo-frontend #
+
+  todo-frontend:
+    build:
+      context: ./todo-frontend
+      dockerfile: dev.Dockerfile
+    environment:
+      - REACT_APP_BACKEND_URL=/api

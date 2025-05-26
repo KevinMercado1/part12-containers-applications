@@ -1,0 +1,47 @@
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - '8080:80'
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    container_name: dev-nginx
+    depends_on:
+      - frontend
+      - todo-backend
+
+  frontend:
+    image: node:18
+    working_dir: /app
+    volumes:
+      - ./todo-frontend:/app
+      - /app/node_modules
+    ports:
+      - '5173:5173'
+    environment:
+      - VITE_BACKEND_URL=http://localhost:8080/api
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
+    container_name: dev-frontend
+
+  todo-backend:
+    image: node:18
+    working_dir: /app
+    volumes:
+      - ./todo-backend:/app
+      - /app/node_modules
+    environment:
+      - PORT=3001
+      - DATABASE_URL=mongodb://mongo:27017/todoapp
+    command: sh -c "npm install && npm run dev"
+    depends_on:
+      - mongo
+    container_name: dev-backend
+
+  mongo:
+    image: mongo:4.4
+    volumes:
+      - dev_mongodb_data:/data/db
+    container_name: dev-mongo
+
+volumes:
+  dev_mongodb_data:

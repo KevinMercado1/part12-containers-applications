@@ -1,0 +1,12 @@
+Script started on Wed May 21 11:24:32 2025
+[1m[7m%[27m[1m[0m                                                                                                                                             [0m[27m[24m[Jkevinmercado@Kevins-MacBook-Air part12-containers-applications % [K[?2004h[7m curl http://helsinki.fi [27m[25D[27m [27mc[27mu[27mr[27ml[27m [27mh[27mt[27mt[27mp[27m:[27m/[27m/[27mh[27me[27ml[27ms[27mi[27mn[27mk[27mi[27m.[27mf[27mi[27m [?2004l
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+[1m[7m%[27m[1m[0m                                                                                                                                             [0m[27m[24m[Jkevinmercado@Kevins-MacBook-Air part12-containers-applications % [K[?2004heexit[?2004l
+
+Script done on Wed May 21 11:25:04 2025

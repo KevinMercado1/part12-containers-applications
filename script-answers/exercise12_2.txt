@@ -1,0 +1,31 @@
+Script started on Wed May 21 12:05:50 2025
+[1m[7m%[27m[1m[0m                                                                                                                                             [0m[27m[24m[Jkevinmercado@Kevins-MacBook-Air part12-containers-applications % [K[?2004hscript script-answers/exercise12_2.txt[38Dexit                                  [34Ddocker run -it ubuntu bash[26D docker container run hello-world[?2004l
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (arm64v8)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[1m[7m%[27m[1m[0m                                                                                                                                             [0m[27m[24m[Jkevinmercado@Kevins-MacBook-Air part12-containers-applications % [K[?2004h docker container run hello-world[33Dscript script-answers/exercise12_2.txt[38Dexit                                  [34Ddocker run -it ubuntu bash[?2004l
+[?2004h]0;root@4b06bb95b475: /root@4b06bb95b475:/# mkdir -p [7m/usr/src/app/index.js[27m/usr/src/app/index.js
+[?2004l[?2004h]0;root@4b06bb95b475: /root@4b06bb95b475:/# [Kexit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                                                                             [0m[27m[24m[Jkevinmercado@Kevins-MacBook-Air part12-containers-applications % [K[?2004heexit[?2004l
+
+Script done on Wed May 21 12:06:40 2025

@@ -1,0 +1,41 @@
+GET http://localhost:3000/todos
+
+###
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "text": "Estudiar Docker"
+}
+
+###
+
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "text": "Aprender Redis"
+}
+
+###
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "text": "Test todo from REST client"
+}
+
+### 
+GET http://localhost:3000/todos
+
+### Get statistics (added_todos counter)
+GET http://localhost:3000/todos/statistics
+
+###
+
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "text": "Test todo"
+}

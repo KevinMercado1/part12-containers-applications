@@ -1,0 +1,35 @@
+services:
+  backend:
+    build: .
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - '3000:3000'
+    command: npm run dev
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URL=mongodb://root:example@mongo:27017/todosdb?authSource=admin
+      - REDIS_URL=redis://redis:6379
+
+  mongo:
+    image: mongo
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongo-data:/data/db
+
+  redis:
+    image: redis
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis-data:/data
+
+volumes:
+  mongo-data:
+  redis-data:
